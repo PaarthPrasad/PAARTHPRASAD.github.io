@@ -4,10 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Paarth Prasad is a Ph.D. student in Computer Science at Hanyang University, Seoul. Research interests include computer graphics, human motion, robotics, and machine learning.">
+  <meta name="description" content="Paarth Prasad is a Ph.D. student in Computer Science at Hanyang University, Seoul.">
   <title>Paarth Prasad — Computer Science Researcher</title>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <style>
     :root {
@@ -16,8 +14,10 @@
       --navy: #204d73;
       --line: #d9dee3;
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       background: #fff;
@@ -27,16 +27,21 @@
       line-height: 1.67;
       -webkit-font-smoothing: antialiased;
     }
+
     a {
       color: var(--navy);
       text-underline-offset: 3px;
     }
+
     a:hover { color: #102c47; }
+
     .container {
       width: min(100% - 64px, 970px);
       margin: 0 auto;
     }
+
     .site-header { border-bottom: 1px solid var(--line); }
+
     .header-inner {
       min-height: 82px;
       display: flex;
@@ -44,6 +49,7 @@
       justify-content: space-between;
       gap: 20px;
     }
+
     .site-name {
       font-weight: 700;
       font-size: 22px;
@@ -52,18 +58,21 @@
       text-decoration: none;
       white-space: nowrap;
     }
+
     nav {
       display: flex;
       gap: 26px;
       align-items: center;
       flex-wrap: wrap;
     }
+
     nav a {
       color: #3c4652;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 13px;
       text-decoration: none;
     }
+
     nav a:hover { text-decoration: underline; }
 
     .intro {
@@ -74,6 +83,7 @@
       align-items: start;
       border-bottom: 1px solid var(--line);
     }
+
     .intro h1 {
       font-size: clamp(43px, 5.5vw, 58px);
       font-weight: 400;
@@ -81,21 +91,25 @@
       line-height: 1.14;
       margin: 0 0 11px;
     }
+
     .role {
       font-size: 20px;
       color: #354354;
       margin: 0 0 5px;
     }
+
     .affiliation {
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 14px;
       margin: 0 0 27px;
     }
+
     .intro p.about {
       margin: 0 0 17px;
       max-width: 610px;
     }
+
     .intro-links {
       display: flex;
       flex-wrap: wrap;
@@ -105,7 +119,7 @@
       font-size: 13px;
     }
 
-    /* Circular profile photograph */
+    /* Circular photograph */
     .portrait {
       width: 225px;
       height: 225px;
@@ -116,6 +130,7 @@
       border: 1px solid #e0e2e4;
       background: #e5e5e5;
     }
+
     .photo-caption {
       margin: 9px 0 0;
       color: #7b8188;
@@ -129,11 +144,13 @@
       border-bottom: 1px solid var(--line);
       scroll-margin-top: 24px;
     }
+
     .section-grid {
       display: grid;
       grid-template-columns: 200px minmax(0, 1fr);
       gap: 44px;
     }
+
     h2 {
       margin: 0;
       font-size: 23px;
@@ -141,6 +158,7 @@
       letter-spacing: -.025em;
       line-height: 1.4;
     }
+
     .section-content p { margin: 0 0 13px; }
     .section-content p:last-child { margin-bottom: 0; }
 
@@ -149,20 +167,24 @@
       padding: 0;
       margin: 0;
     }
+
     .research-list li {
       padding: 0 0 13px;
       margin: 0 0 13px;
       border-bottom: 1px solid #edf0f2;
     }
+
     .research-list li:last-child {
       border: 0;
       margin: 0;
       padding: 0;
     }
+
     .research-list strong {
       display: block;
       font-size: 17px;
     }
+
     .research-list span {
       color: var(--muted);
       font-size: 15px;
@@ -174,24 +196,29 @@
       gap: 9px;
       margin-bottom: 26px;
     }
+
     .publication:last-child { margin-bottom: 0; }
+
     .pub-number {
       color: #7b8490;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 13px;
       padding-top: 4px;
     }
+
     .publication-title {
       font-size: 17px;
       line-height: 1.55;
       font-weight: 600;
     }
+
     .pub-meta {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 13px;
       color: var(--muted);
       margin: 5px 0;
     }
+
     .pub-links {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 13px;
@@ -205,26 +232,74 @@
       margin-bottom: 17px;
       border-bottom: 1px solid #edf0f2;
     }
+
     .edu-item:last-child {
       padding-bottom: 0;
       margin-bottom: 0;
       border: 0;
     }
+
     .edu-title { font-weight: 600; }
+
     .edu-degree {
       color: var(--muted);
       font-size: 15px;
     }
+
     .edu-date {
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 13px;
       white-space: nowrap;
     }
+
     .fine-print {
       font-size: 14px;
       color: var(--muted);
     }
+
+    /* Built-in social media icons */
+    .icon-sprite {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .brand-icon {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+      flex: 0 0 15px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .social-group { margin-bottom: 18px; }
+    .social-group:last-child { margin-bottom: 0; }
+
+    .social-heading {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .social-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 17px;
+    }
+
+    .social-items a {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
     footer {
       padding: 30px 0 38px;
       color: #7a828b;
@@ -237,43 +312,55 @@
 
     @media (max-width: 760px) {
       .container { width: min(100% - 36px, 970px); }
+
       .header-inner {
         padding: 21px 0;
         align-items: flex-start;
         flex-direction: column;
         gap: 13px;
       }
+
       nav { gap: 15px; }
+
       .intro {
         padding: 42px 0;
         grid-template-columns: minmax(0, 1fr) 160px;
         gap: 25px;
       }
+
       .portrait {
         width: 160px;
         height: 160px;
       }
+
       .section-grid {
         grid-template-columns: 150px minmax(0, 1fr);
         gap: 25px;
       }
     }
+
     @media (max-width: 550px) {
       .intro {
         grid-template-columns: 1fr;
         gap: 27px;
       }
+
       .intro .portrait-wrap { grid-row: 1; }
+
       .portrait {
         width: 170px;
         height: 170px;
       }
+
       .intro h1 { font-size: 44px; }
+
       .section-grid {
         grid-template-columns: 1fr;
         gap: 18px;
       }
+
       .section { padding: 29px 0; }
+
       footer {
         flex-direction: column;
         gap: 6px;
@@ -281,7 +368,27 @@
     }
   </style>
 </head>
+
 <body>
+
+  <!-- Font Awesome Free brand icons, CC BY 4.0 -->
+  <!-- https://fontawesome.com/license/free -->
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="icon-google-scholar" viewBox="0 0 512 512"><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></symbol>
+
+    <symbol id="icon-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+
+    <symbol id="icon-linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></symbol>
+
+    <symbol id="icon-x-twitter" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></symbol>
+
+    <symbol id="icon-instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></symbol>
+
+    <symbol id="icon-youtube" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></symbol>
+
+    <symbol id="icon-whatsapp" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></symbol>
+  </svg>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="site-name" href="#top">Paarth Prasad</a>
@@ -296,13 +403,12 @@
   </header>
 
   <main class="container" id="top">
+
     <section class="intro">
       <div>
         <h1>Paarth Prasad</h1>
         <p class="role">Ph.D. Student in Computer Science</p>
-        <p class="affiliation">
-          Hanyang University · Seoul, South Korea
-        </p>
+        <p class="affiliation">Hanyang University · Seoul, South Korea</p>
 
         <p class="about">
           I am a Ph.D. student in Computer Science at
@@ -319,9 +425,19 @@
 
         <div class="intro-links">
           <a href="#publications">Publications</a>
-          <a href="https://scholar.google.com/citations?user=a_O8hL8AAAAJ&amp;hl=en">Google Scholar</a>
-          <a href="https://github.com/PaarthPrasad">GitHub</a>
-          <a href="https://www.linkedin.com/in/paarth-prasad-64652339b/">LinkedIn</a>
+
+          <a class="social-link" href="https://scholar.google.com/citations?user=a_O8hL8AAAAJ&amp;hl=en">
+            <svg class="brand-icon" aria-hidden="true"><use href="#icon-google-scholar"/></svg>Google Scholar
+          </a>
+
+          <a class="social-link" href="https://github.com/PaarthPrasad">
+            <svg class="brand-icon" aria-hidden="true"><use href="#icon-github"/></svg>GitHub
+          </a>
+
+          <a class="social-link" href="https://www.linkedin.com/in/paarth-prasad-64652339b/">
+            <svg class="brand-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn
+          </a>
+
           <a href="#links">More links</a>
         </div>
       </div>
@@ -456,32 +572,69 @@
       </div>
     </section>
 
-     <section class="section section-grid" id="links">   <h2>Elsewhere</h2>    <div class="section-content">      <p>       <strong>Academic and professional:</strong>       <a href="https://scholar.google.com/citations?user=a_O8hL8AAAAJ&amp;hl=en">         <i class="bi bi-mortarboard" aria-hidden="true"></i> Google Scholar       </a> ·       <a href="https://github.com/PaarthPrasad">         <i class="bi bi-github" aria-hidden="true"></i> GitHub       </a> ·       <a href="https://www.linkedin.com/in/paarth-prasad-64652339b/">         <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn       </a>     </p>      <p>       <strong>Social and videos:</strong>       <a href="https://x.com/PaarthPrasad">         <i class="bi bi-twitter-x" aria-hidden="true"></i> X       </a> ·       <a href="https://www.instagram.com/paarth_prasad/">         <i class="bi bi-instagram" aria-hidden="true"></i> Instagram       </a> ·       <a href="https://www.youtube.com/@CC_Curious.Cove1909">         <i class="bi bi-youtube" aria-hidden="true"></i> YouTube       </a>     </p>      <p>       <strong>Community:</strong>       <a href="https://whatsapp.com/channel/0029VbECg0P5a23yleYoCB22">         <i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp Channel       </a>     </p>    </div> </section>
+    <section class="section section-grid" id="links">
       <h2>Elsewhere</h2>
+
       <div class="section-content">
-        <p>
-          <strong>Academic and professional:</strong>
-          <a href="https://scholar.google.com/citations?user=a_O8hL8AAAAJ&amp;hl=en">Google Scholar</a> ·
-          <a href="https://github.com/PaarthPrasad">GitHub</a> ·
-          <a href="https://www.linkedin.com/in/paarth-prasad-64652339b/">LinkedIn</a>
-        </p>
-        <p>
-          <strong>Social and videos:</strong>
-          <a href="https://x.com/PaarthPrasad">X</a> ·
-          <a href="https://www.instagram.com/paarth_prasad/">Instagram</a> ·
-          <a href="https://www.youtube.com/@CC_Curious.Cove1909">YouTube (Curious Cove)</a>
-        </p>
-        <p>
-          <strong>Community:</strong>
-          <a href="https://whatsapp.com/channel/0029VbECg0P5a23yleYoCB22">WhatsApp Channel</a>
-        </p>
+
+        <div class="social-group">
+          <span class="social-heading">Academic and professional</span>
+          <div class="social-items">
+
+            <a class="social-link" href="https://scholar.google.com/citations?user=a_O8hL8AAAAJ&amp;hl=en">
+              <svg class="brand-icon" aria-hidden="true"><use href="#icon-google-scholar"/></svg>Google Scholar
+            </a>
+
+            <a class="social-link" href="https://github.com/PaarthPrasad">
+              <svg class="brand-icon" aria-hidden="true"><use href="#icon-github"/></svg>GitHub
+            </a>
+
+            <a class="social-link" href="https://www.linkedin.com/in/paarth-prasad-64652339b/">
+              <svg class="brand-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn
+            </a>
+
+          </div>
+        </div>
+
+        <div class="social-group">
+          <span class="social-heading">Social and videos</span>
+          <div class="social-items">
+
+            <a class="social-link" href="https://x.com/PaarthPrasad">
+              <svg class="brand-icon" aria-hidden="true"><use href="#icon-x-twitter"/></svg>X
+            </a>
+
+            <a class="social-link" href="https://www.instagram.com/paarth_prasad/">
+              <svg class="brand-icon" aria-hidden="true"><use href="#icon-instagram"/></svg>Instagram
+            </a>
+
+            <a class="social-link" href="https://www.youtube.com/@CC_Curious.Cove1909">
+              <svg class="brand-icon" aria-hidden="true"><use href="#icon-youtube"/></svg>YouTube (Curious Cove)
+            </a>
+
+          </div>
+        </div>
+
+        <div class="social-group">
+          <span class="social-heading">Community</span>
+          <div class="social-items">
+
+            <a class="social-link" href="https://whatsapp.com/channel/0029VbECg0P5a23yleYoCB22">
+              <svg class="brand-icon" aria-hidden="true"><use href="#icon-whatsapp"/></svg>WhatsApp Channel
+            </a>
+
+          </div>
+        </div>
+
       </div>
     </section>
+
   </main>
 
   <footer class="container">
     <span>© 2026 Paarth Prasad</span>
     <span>Personal academic homepage</span>
   </footer>
+
 </body>
 </html>
