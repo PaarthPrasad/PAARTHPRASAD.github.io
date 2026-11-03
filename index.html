@@ -1,33 +1,484 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Paarth Prasad — PhD student in Computer Science at Hanyang University. Research in computer graphics, AI, robotics, and human motion." />
-  <meta name="theme-color" content="#f8fafc" />
-  <title>Paarth Prasad | Researcher</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Paarth Prasad is a Ph.D. student in Computer Science at Hanyang University, Seoul. Research interests include computer graphics, human motion, robotics, and machine learning.">
+  <title>Paarth Prasad — Computer Science Researcher</title>
   <style>
-    :root{--bg:#f8fafc;--surface:#fff;--ink:#17243b;--muted:#53647b;--accent:#2563eb;--border:#e2e8f0;--shadow:0 12px 35px rgba(30,58,95,.05)}
-    [data-theme="dark"]{--bg:#0c1220;--surface:#151e30;--ink:#f1f5f9;--muted:#a9b8ce;--accent:#93b4ff;--border:#2a3750;--shadow:none}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;cursor:pointer}.wrap{max-width:1050px;margin:auto;padding:0 26px}.top{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--border)}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;color:var(--ink);font-size:1.1rem}.links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.links a{font-size:.89rem;color:var(--muted)}.toggle{border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--ink);padding:5px 11px}.hero{padding:88px 0 65px;display:grid;grid-template-columns:1fr 210px;align-items:center;gap:45px}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.09em;text-transform:uppercase;font-size:.78rem}.hero h1{font-size:clamp(2.7rem,6vw,4.3rem);letter-spacing:-.055em;line-height:1.12;margin:14px 0}.subtitle{font-size:1.22rem;color:var(--muted);margin:0 0 18px}.hero p{max-width:650px}.portrait{height:210px;width:210px;border-radius:24px;background:linear-gradient(135deg,#dbeafe,#bfdbfe);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;text-align:center;color:#38547c;font-weight:600;padding:20px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.btn{border-radius:10px;padding:10px 17px;border:1px solid var(--border);display:inline-block;font-weight:650;background:var(--surface)}.btn.primary{background:#2563eb;color:white;border-color:#2563eb}.btn:hover{text-decoration:none;transform:translateY(-1px)}section{padding:42px 0;scroll-margin-top:95px}h2{font-size:1.75rem;letter-spacing:-.035em;margin:0 0 18px}.lead{color:var(--muted);max-width:760px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--surface);border:1px solid var(--border);border-radius:17px;padding:24px;box-shadow:var(--shadow)}.card h3{margin:0 0 8px;font-size:1.1rem}.card p{color:var(--muted);margin:8px 0}.tag{display:inline-block;font-size:.78rem;background:var(--bg);border:1px solid var(--border);padding:2px 10px;border-radius:99px;margin:5px 5px 0 0;color:var(--muted)}.pub{margin-bottom:14px}.pub:last-child{margin-bottom:0}.small{font-size:.89rem;color:var(--muted)}.socials{display:flex;gap:12px;flex-wrap:wrap}.socials a{display:inline-block;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:9px 15px;font-weight:600}.note{border-left:3px solid var(--accent);padding-left:15px;color:var(--muted)}footer{border-top:1px solid var(--border);margin-top:50px;padding:28px 0;color:var(--muted);font-size:.86rem}@media(max-width:740px){.nav{align-items:flex-start;padding-top:14px;padding-bottom:14px;flex-direction:column}.links{gap:12px}.hero{grid-template-columns:1fr;padding:54px 0 35px}.portrait{grid-row:1;width:150px;height:150px}.cards{grid-template-columns:1fr}section{padding:32px 0}}
+    :root {
+      --ink: #202936;
+      --muted: #59636e;
+      --navy: #204d73;
+      --line: #d9dee3;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.67;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: var(--navy);
+      text-underline-offset: 3px;
+    }
+    a:hover { color: #102c47; }
+    .container {
+      width: min(100% - 64px, 970px);
+      margin: 0 auto;
+    }
+    .site-header { border-bottom: 1px solid var(--line); }
+    .header-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .site-name {
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: -.025em;
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    nav {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #3c4652;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    .intro {
+      padding: 67px 0 58px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 225px;
+      gap: 72px;
+      align-items: start;
+      border-bottom: 1px solid var(--line);
+    }
+    .intro h1 {
+      font-size: clamp(43px, 5.5vw, 58px);
+      font-weight: 400;
+      letter-spacing: -.05em;
+      line-height: 1.14;
+      margin: 0 0 11px;
+    }
+    .role {
+      font-size: 20px;
+      color: #354354;
+      margin: 0 0 5px;
+    }
+    .affiliation {
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      margin: 0 0 27px;
+    }
+    .intro p.about {
+      margin: 0 0 17px;
+      max-width: 610px;
+    }
+    .intro-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 17px;
+      margin-top: 21px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+    }
+
+    /* Circular profile photograph */
+    .portrait {
+      width: 225px;
+      height: 225px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border: 1px solid #e0e2e4;
+      background: #e5e5e5;
+    }
+    .photo-caption {
+      margin: 9px 0 0;
+      color: #7b8188;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .section {
+      padding: 38px 0 40px;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 24px;
+    }
+    .section-grid {
+      display: grid;
+      grid-template-columns: 200px minmax(0, 1fr);
+      gap: 44px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 23px;
+      font-weight: 400;
+      letter-spacing: -.025em;
+      line-height: 1.4;
+    }
+    .section-content p { margin: 0 0 13px; }
+    .section-content p:last-child { margin-bottom: 0; }
+
+    .research-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .research-list li {
+      padding: 0 0 13px;
+      margin: 0 0 13px;
+      border-bottom: 1px solid #edf0f2;
+    }
+    .research-list li:last-child {
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+    .research-list strong {
+      display: block;
+      font-size: 17px;
+    }
+    .research-list span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 25px minmax(0, 1fr);
+      gap: 9px;
+      margin-bottom: 26px;
+    }
+    .publication:last-child { margin-bottom: 0; }
+    .pub-number {
+      color: #7b8490;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      padding-top: 4px;
+    }
+    .publication-title {
+      font-size: 17px;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+    .pub-meta {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+      margin: 5px 0;
+    }
+    .pub-links {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+    }
+
+    .edu-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      padding-bottom: 17px;
+      margin-bottom: 17px;
+      border-bottom: 1px solid #edf0f2;
+    }
+    .edu-item:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: 0;
+    }
+    .edu-title { font-weight: 600; }
+    .edu-degree {
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .edu-date {
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .fine-print {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    footer {
+      padding: 30px 0 38px;
+      color: #7a828b;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: 760px) {
+      .container { width: min(100% - 36px, 970px); }
+      .header-inner {
+        padding: 21px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+      }
+      nav { gap: 15px; }
+      .intro {
+        padding: 42px 0;
+        grid-template-columns: minmax(0, 1fr) 160px;
+        gap: 25px;
+      }
+      .portrait {
+        width: 160px;
+        height: 160px;
+      }
+      .section-grid {
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 25px;
+      }
+    }
+    @media (max-width: 550px) {
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 27px;
+      }
+      .intro .portrait-wrap { grid-row: 1; }
+      .portrait {
+        width: 170px;
+        height: 170px;
+      }
+      .intro h1 { font-size: 44px; }
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .section { padding: 29px 0; }
+      footer {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header class="top"><nav class="wrap nav" aria-label="Main navigation"><a class="brand" href="#home">Paarth Prasad<span style="color:var(--accent)">.</span></a><div class="links"><a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#connect">Connect</a><button class="toggle" id="theme-toggle" aria-label="Toggle dark mode">☾ Theme</button></div></nav></header>
-  <main class="wrap">
-    <div class="hero" id="home"><div><div class="eyebrow">Computer Science · Research</div><h1>Hi, I'm Paarth.</h1><p class="subtitle">PhD Student at Hanyang University, Seoul</p><p>I explore the intersection of <strong>computer graphics, artificial intelligence, robotics, and human motion</strong>. I'm interested in building intelligent systems that understand and simulate the physical world.</p><div class="actions"><a class="btn primary" href="#research">Explore my research</a><a class="btn" href="#connect">Connect with me</a></div></div><img class="portrait" src="profile-photo.png" alt="Paarth Prasad" /></div>
-    <section id="about"><h2>About me</h2><p class="lead">I'm a Computer Science PhD student at Hanyang University in Seoul, South Korea, working with Prof. Taesoo Kwon. My interests span physics-based character animation, computer graphics, machine learning, robotics, and digital twins. Previously, I studied Data Science at Delhi Technological University and Computer Science at Guru Gobind Singh Indraprastha University.</p><div><span class="tag">Computer Graphics</span><span class="tag">Physics-Based Animation</span><span class="tag">Machine Learning</span><span class="tag">Robotics</span><span class="tag">Digital Twins</span></div></section>
-    <section id="research"><h2>Research & publications</h2><p class="lead">Selected preprints and research directions. Publication status is shown conservatively until peer-reviewed acceptance is confirmed.</p><div class="card pub"><h3>SparseContrast: Dynamic Sparse Attention for Contrastive Learning in Medical Imaging</h3><p class="small">Preprint · 2026</p><a href="https://arxiv.org/abs/2605.00887" target="_blank" rel="noopener noreferrer">Read on arXiv ↗</a></div><div class="card pub"><h3>Topology-Constrained Quantized nnUNet for 3D Tooth Segmentation</h3><p class="small">Preprint · 2026</p><a href="https://arxiv.org/abs/2605.04201" target="_blank" rel="noopener noreferrer">Read on arXiv ↗</a></div></section>
-    <section id="projects"><h2>Projects & current interests</h2><div class="cards"><article class="card"><h3>Physics-based motion generation</h3><p>Exploring physically plausible motion, contact, and multi-agent coordination for virtual characters and robotics.</p><span class="tag">Research direction</span></article><article class="card"><h3>Computer graphics & simulation</h3><p>Developing skills in motion processing, character animation, simulation tools, and interactive visualizations.</p><span class="tag">In progress</span></article><article class="card"><h3>Medical image analysis</h3><p>Efficient deep learning methods for representation learning and 3D medical image segmentation.</p><span class="tag">Prior research</span></article><article class="card"><h3>Digital twins & intelligent systems</h3><p>Interests in cyber-physical systems, robotics, and simulation-driven machine intelligence.</p><span class="tag">Research interest</span></article></div></section>
-    <section id="education"><h2>Education</h2><div class="cards"><div class="card"><h3>Hanyang University</h3><p>PhD in Computer Science · 2026–present</p><p class="small">Seoul, South Korea</p></div><div class="card"><h3>Delhi Technological University</h3><p>M.Tech in Data Science · 2026</p><p class="small">Delhi, India</p></div><div class="card"><h3>Guru Gobind Singh Indraprastha University</h3><p>B.Tech in Computer Science and Engineering</p><p class="small">Delhi, India</p></div></div></section>
-    <section id="updates"><h2>Updates</h2><p class="note">This section will feature research milestones, new papers, projects, and occasional notes. More coming soon.</p></section>
-    <section id="connect"><h2>Connect</h2><p class="lead">Find my research, projects, and videos through the links below. More social profiles will be added once their URLs are confirmed.</p><div class="socials"><a href="https://github.com/PaarthPrasad" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.youtube.com/@CC_Curious.Cove1909" target="_blank" rel="noopener noreferrer">YouTube · Curious Cove ↗</a></div><p class="small">LinkedIn · X · Instagram · WhatsApp Channel · Google Scholar · CV — links coming soon.</p></section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="#top">Paarth Prasad</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#links">Links</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <section class="intro">
+      <div>
+        <h1>Paarth Prasad</h1>
+        <p class="role">Ph.D. Student in Computer Science</p>
+        <p class="affiliation">
+          Hanyang University · Seoul, South Korea
+        </p>
+
+        <p class="about">
+          I am a Ph.D. student in Computer Science at
+          <a href="https://www.hanyang.ac.kr/web/eng">Hanyang University</a>,
+          advised by Prof. Taesoo Kwon.
+        </p>
+
+        <p class="about">
+          My research interests lie at the intersection of
+          computer graphics, machine learning, and robotics,
+          particularly physics-based animation, human motion,
+          and intelligent systems that interact with the physical world.
+        </p>
+
+        <div class="intro-links">
+          <a href="#publications">Publications</a>
+          <a href="https://scholar.google.com/citations?user=a_O8hL8AAAAJ&amp;hl=en">Google Scholar</a>
+          <a href="https://github.com/PaarthPrasad">GitHub</a>
+          <a href="https://www.linkedin.com/in/paarth-prasad-64652339b/">LinkedIn</a>
+          <a href="#links">More links</a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap">
+        <img
+          class="portrait"
+          src="profile-photo.png"
+          alt="Portrait of Paarth Prasad"
+          width="225"
+          height="225"
+        >
+        <p class="photo-caption">Paarth Prasad</p>
+      </div>
+    </section>
+
+    <section class="section section-grid" id="about">
+      <h2>About</h2>
+      <div class="section-content">
+        <p>
+          Before joining Hanyang University, I completed an M.Tech
+          in Data Science at Delhi Technological University and
+          a B.Tech in Computer Science and Engineering at
+          Guru Gobind Singh Indraprastha University, India.
+        </p>
+        <p>
+          My previous work has focused on efficient deep learning
+          methods for medical image analysis. I am now exploring
+          research directions in character animation, physical
+          simulation, and learning-based motion generation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-grid" id="research">
+      <h2>Research interests</h2>
+      <div class="section-content">
+        <ul class="research-list">
+          <li>
+            <strong>Computer graphics and animation</strong>
+            <span>Physics-based character animation, motion modeling,
+            and contact-aware simulation.</span>
+          </li>
+          <li>
+            <strong>Machine learning and robotics</strong>
+            <span>Learning for embodied systems, human–robot
+            interaction, and intelligent physical agents.</span>
+          </li>
+          <li>
+            <strong>Digital twins and applied AI</strong>
+            <span>Simulation-driven systems, cyber-physical
+            environments, and efficient deep learning.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-grid" id="publications">
+      <h2>Publications</h2>
+      <div class="section-content">
+        <p class="fine-print">
+          Preprints and manuscripts; peer-reviewed publication
+          status is not implied.
+        </p>
+
+        <article class="publication">
+          <span class="pub-number">01</span>
+          <div>
+            <div class="publication-title">
+              SparseContrast: Dynamic Sparse Attention for
+              Contrastive Learning in Medical Imaging
+            </div>
+            <div class="pub-meta">Preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2605.00887">arXiv</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <span class="pub-number">02</span>
+          <div>
+            <div class="publication-title">
+              Topology-Constrained Quantized nnUNet for
+              3D Tooth Segmentation
+            </div>
+            <div class="pub-meta">Preprint · 2026</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2605.04201">arXiv</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-grid" id="education">
+      <h2>Education</h2>
+      <div class="section-content">
+
+        <div class="edu-item">
+          <div>
+            <div class="edu-title">Hanyang University</div>
+            <div class="edu-degree">
+              Ph.D. in Computer Science · Seoul, South Korea
+            </div>
+          </div>
+          <span class="edu-date">2026–present</span>
+        </div>
+
+        <div class="edu-item">
+          <div>
+            <div class="edu-title">Delhi Technological University</div>
+            <div class="edu-degree">
+              M.Tech in Data Science · Delhi, India
+            </div>
+          </div>
+          <span class="edu-date">2026</span>
+        </div>
+
+        <div class="edu-item">
+          <div>
+            <div class="edu-title">
+              Guru Gobind Singh Indraprastha University
+            </div>
+            <div class="edu-degree">
+              B.Tech in Computer Science and Engineering · Delhi, India
+            </div>
+          </div>
+          <span class="edu-date">Prior to 2026</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-grid" id="links">
+      <h2>Elsewhere</h2>
+      <div class="section-content">
+        <p>
+          <strong>Academic and professional:</strong>
+          <a href="https://scholar.google.com/citations?user=a_O8hL8AAAAJ&amp;hl=en">Google Scholar</a> ·
+          <a href="https://github.com/PaarthPrasad">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/paarth-prasad-64652339b/">LinkedIn</a>
+        </p>
+        <p>
+          <strong>Social and videos:</strong>
+          <a href="https://x.com/PaarthPrasad">X</a> ·
+          <a href="https://www.instagram.com/paarth_prasad/">Instagram</a> ·
+          <a href="https://www.youtube.com/@CC_Curious.Cove1909">YouTube (Curious Cove)</a>
+        </p>
+        <p>
+          <strong>Community:</strong>
+          <a href="https://whatsapp.com/channel/0029VbECg0P5a23yleYoCB22">WhatsApp Channel</a>
+        </p>
+      </div>
+    </section>
   </main>
-  <footer><div class="wrap">© <span id="year"></span> Paarth Prasad · Built with HTML & CSS · Hosted on GitHub Pages</div></footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const button = document.getElementById('theme-toggle');
-    button.addEventListener('click', () => { const dark = document.documentElement.dataset.theme === 'dark'; document.documentElement.dataset.theme = dark ? 'light' : 'dark'; button.textContent = dark ? '☾ Theme' : '☀ Theme'; });
-  </script>
+
+  <footer class="container">
+    <span>© 2026 Paarth Prasad</span>
+    <span>Personal academic homepage</span>
+  </footer>
 </body>
 </html>
